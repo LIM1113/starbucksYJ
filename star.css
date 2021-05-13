@@ -1,0 +1,433 @@
+:root{
+  /*--color--*/
+  --green-color: #1e3932;
+  --white-color: #fff;
+  --white-light-color: rgba(220, 220, 220, 0.5);
+  --ivory-color: #f6f5ef;
+  --black-color: #2C2A29;
+  /*--font-color--*/
+ --black-font-color: #555;
+  /*--padding--*/
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+ul{
+  padding-left: 0;
+}
+
+.topwrapTop{
+  background-color: var(--ivory-color);
+  width: 100%;
+  height: 100px;
+}
+
+.topwrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: var(--ivory-color);
+  max-width: 1080px;
+  min-width: 1080px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position:relative;
+}
+
+.topwrapnavOne{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 15px;
+}
+
+.topwrapnavOne span{
+  padding: 0 20px;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+
+.topwrapnavOne span:not(:first-child, :last-child){
+  border-left: 0.5px solid var(--white-light-color);
+}
+
+.topwrapSearch a{
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 6px 5px 0;
+}
+
+.topwrapnavTwo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+
+.topwrapnavTwo span{
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: .85rem;
+}
+
+.topwrapnavOne span:hover{
+  cursor: pointer;
+  color: gray;
+}
+.topwrapnavTwo span:hover{
+  cursor: pointer;
+}
+
+/*메뉴 드랍다운*/
+.topwrapnavTwo .coffee_dropdown{
+  display: none;
+}
+
+
+/*메인 배너*/
+
+.container{
+  background-image: url(https://image.istarbucks.co.kr/upload/common/img/main/2021/2021_summer1_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.container_inner{
+  max-width: 1080px;
+  min-width: 1080px;
+  margin: 0 auto;
+/*  display: flex;
+   justify-content: space-between;*/
+  padding: 0 15px;
+  position: relative;
+}
+
+.slogan{
+  padding-top: 40px;
+}
+
+.sloganBtn{
+  display: block;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  width: 100px;
+  border: 2.3px solid var(--black-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .4s;
+  margin-top: 40px;
+}
+
+.sloganBtn a{
+  color: var(--black-color);
+}
+
+.sloganBtn:hover{
+  background-color: var(--white-light-color);
+}
+
+.cups{
+  display: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.cup1{
+  position: absolute;
+  bottom: -22.7%;
+  left: 34.1%;
+  width: 46%;
+  max-width: 487px;
+}
+
+.cup2{
+  position: absolute;
+  bottom: -11.7%;
+  left: 58.1%;
+  width: 46%;
+  max-width: 487px;
+}
+
+.card{
+  position: fixed;
+  display: absolute;
+  top: 148px;
+  right: 61px;
+  z-index: 999;
+}
+
+/*화이트, 블랙 배너*/
+.containerBar{
+  position: relative;
+}
+
+.black{
+  background-color : #444;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 50%;
+  height: 80px;
+}
+
+.white{
+  background-color : var(--ivory-color);
+  position: absolute;
+  top:0;
+  right:0;
+  width: 50%;
+  height: 80px;
+}
+
+.containerBar_flex{
+  position: relative;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1080px;
+  min-width: 1080px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.black_title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  justify-content: space-around;
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.black_title ul{
+  height: 25px;
+  overflow: hidden;
+}
+
+.black_title a{
+  background-image: url(https://image.istarbucks.co.kr/common/img/common/icon_add_card.png);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: -88px -41px;
+}
+
+.white_title{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--black-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 50%;
+}
+
+.white_title img.turn{
+  transition: all 0.4s;
+}
+
+.white_title img.clicked{
+   transform: rotate(180deg);
+   transition: all 0.4s;
+}
+
+/*green login*/
+.new-login-back{
+    background-color: var(--green-color);
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+}
+
+.new-login{
+  max-width: 1080px;
+  min-width: 1080px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+}
+
+.new-login>a{
+  flex-basis: 30%;
+}
+.new-login-content{
+  flex-basis: 70%;
+}
+
+.new-login-content, .new-login-content a{
+  color: var(--white-color);
+}
+
+.new-login .new-login-top{
+  border-bottom: .1px solid var(--white-light-color);
+}
+
+.new-login-top{
+  padding-bottom: 20px;
+}
+
+.new-login-top h4{
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.new-login-textBox{
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-login-textBox a{
+  border: 1px solid var(--white-color);
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.new-login-bottom{
+  padding-top: 20px;
+}
+
+.new-login-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-login-bottom a{
+  border: 1px solid var(--white-color);
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.new-login-Btn>a:hover, .new-login-bottom>a:hover{
+  background-color: var(--white-light-color);
+  transition: all 0.3s
+}
+
+/*pick your*/
+.pickyour{
+  background: url(https://www.starbucks.co.kr/common/img/main/mob_fav_prod_bg_new.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  height: 800px;
+}
+
+.pickyour .background{
+  max-width: 1080px;
+  min-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.picktext1{
+  position: absolute;
+  top: 150px;
+  left: 111px;
+}
+.picktext2{
+  position: absolute;
+  top: 400px;
+  left: 10px;
+}
+
+/*footer*/
+.footerBox{
+  background-color: var(--black-color);
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 32px;
+}
+
+.menu{
+  display: flex;
+  max-width: 1080px;
+  min-width: 1080px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.footerBox .menu ul{
+  width: 220px;
+}
+
+.menu h5{
+  height: 30px;
+}
+.menu ul li{
+  height: 25px;
+  font-size: 0.8rem;
+}
+
+/*footerBottom*/
+
+.footerBottom{
+  max-width: 1080px;
+  min-width: 1080px;
+  margin: 0 auto;
+  padding-top: 40px;
+  font-size: 0.8rem;
+}
+
+.footerBottom ul,.footerBottom div{
+  text-align: center;
+}
+.footerBottom ul{
+  margin: 40px 0;
+}
+
+.footerBottom div{
+  padding-bottom: 40px;
+}
+.footerBottom div span{
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.footerBottom ul li{
+  display: inline-block;
+  padding: 0 3px 0 7px;
+}
+
+.footermenu li:not(:first-child){
+  border-left: 0.5px solid var(--white-light-color);
+}
+
+.pointer:hover{
+  cursor: pointer;
+  color: gray;
+}
